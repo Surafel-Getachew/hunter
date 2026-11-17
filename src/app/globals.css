@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* One light theme. Tie shadcn's `dark:` styles to a class we never set. */
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Job hunt — "paper & walnut".
+ * Warm paper ground, walnut ink for actions, Spectral headings over IBM Plex.
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-plex-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-spectral), Georgia, serif;
+  --font-serif: var(--font-spectral), Georgia, serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+@theme {
+  /* Eligibility tiers. */
+  --color-tier-open: #3f7d4e;
+  --color-tier-likely: #a8781f;
+  --color-tier-unknown: #7d7366;
+  --color-tier-possible: #3f6a92;
+
+  /* Charts. Validated pair (dataviz validator, light, on #fffdf8): matches found, applications sent. */
+  --color-chart-1: #a8612a;
+  --color-chart-2: #2d6fa8;
+  --color-chart-grid: #ece4d6;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #f7f4ee;
+  --foreground: #2b211a;
+  --card: #fffdf8;
+  --card-foreground: #2b211a;
+  --popover: #fffdf8;
+  --popover-foreground: #2b211a;
+  --primary: #7a5636;
+  --primary-foreground: #fbf7f0;
+  --secondary: #efe7da;
+  --secondary-foreground: #4a3826;
+  --muted: #efe9df;
+  --muted-foreground: #6f6253;
+  --accent: #ead9c3;
+  --accent-foreground: #3d2c1c;
+  --destructive: #a8432f;
+  --border: #e1d6c6;
+  --input: #d9ccb9;
+  --ring: #a37a52;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}

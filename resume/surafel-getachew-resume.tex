@@ -1,0 +1,343 @@
+\documentclass[letterpaper,11pt]{article}
+
+% ── PAGE LAYOUT ───────────────────────────────────────────────────────────────
+\usepackage[
+  left=0.75in,
+  right=0.75in,
+  top=0.75in,
+  bottom=0.75in
+]{geometry}
+
+% ── PACKAGES ──────────────────────────────────────────────────────────────────
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage[sfdefault]{FiraSans}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% ── HYPERREF METADATA ─────────────────────────────────────────────────────────
+\hypersetup{
+  pdftitle={Surafel Getachew - Senior Full Stack Developer},
+  pdfauthor={Surafel Getachew},
+  pdfsubject={Resume},
+  pdfkeywords={
+    Full Stack Developer,
+    React,
+    Next.js,
+    Node.js,
+    TypeScript,
+    LangChain,
+    LangGraph,
+    AWS,
+    Docker,
+    Terraform,
+    PostgreSQL
+  }
+}
+
+% ── TYPOGRAPHY ────────────────────────────────────────────────────────────────
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedbottom
+\raggedright
+\setstretch{1.04}
+
+% ── SECTION HEADINGS ──────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\raggedright}
+  {}{0em}{}
+  [\vspace{2pt}\titlerule]
+
+\titlespacing{\section}
+  {0pt}{16pt}{8pt}
+
+% ── HELPER MACROS ─────────────────────────────────────────────────────────────
+\newcommand{\resumeItem}[1]{%
+  \item \small{#1}
+}
+
+\newcommand{\resumeSubheading}[4]{%
+  \item
+  \begin{tabular*}{\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \small #2 \\
+    \textit{\small #3} & \textit{\small #4}
+  \end{tabular*}
+}
+
+% Sub-role inside a company (no bullet, indented)
+\newcommand{\resumeSubRole}[2]{%
+  \vspace{4pt}
+  \begin{tabular*}{\textwidth}[t]
+    {l@{\extracolsep{\fill}}r}
+    \textit{\small\textbf{#1}} &
+    \textit{\small #2}
+  \end{tabular*}
+}
+
+\newcommand{\resumeProjectHeading}[2]{%
+  \item
+  \begin{tabular*}{\textwidth}
+    {l@{\extracolsep{\fill}}r}
+    \small \textbf{#1} & \small #2
+  \end{tabular*}
+}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=0pt,label={},itemsep=12pt]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}[
+    leftmargin=18pt,
+    itemsep=5pt,
+    parsep=2pt,
+    topsep=5pt
+  ]
+}
+
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}
+}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+
+% ── HEADER ────────────────────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Surafel Getachew}\\[8pt]
+
+  \small
+  surafel5751@gmail.com
+  \quad|\quad
+  +251 921 123 168\\[4pt]
+
+  \href{https://linkedin.com/in/surafel-getachew}
+  {linkedin.com/in/surafel-getachew}
+  \quad|\quad
+  \href{https://github.com/surafel-getachew}
+  {github.com/surafel-getachew}
+\end{center}
+
+% ── PROFESSIONAL SUMMARY ──────────────────────────────────────────────────────
+\section{Professional Summary}
+
+Senior Full Stack Developer with 7 years of experience architecting and delivering high-performance
+web applications and AI-powered platforms. Specialized in React, Next.js, Node.js, and LLM
+integrations (LangChain, LangGraph). Proven track record building scalable, secure, and
+high-traffic systems for clients in healthcare, open-source, and education sectors across the US,
+Europe, and Africa. Deep experience with CI/CD pipelines, test-driven development (TDD), cloud
+infrastructure (AWS, Docker, Terraform), RESTful API design, and agile/scrum methodologies in
+cross-functional teams. Comfortable leading front-end teams, conducting code reviews, and mentoring
+junior engineers.
+
+% ── EXPERIENCE ────────────────────────────────────────────────────────────────
+\section{Experience}
+
+\resumeSubHeadingListStart
+
+  %% ── OpenTeams ──────────────────────────────────────────────────────────────
+  \resumeSubheading
+    {Senior Full Stack Developer}{May 2023 -- Present}
+    {\href{https://openteams.com}{OpenTeams}}{Texas, United States (Remote)}
+
+  \resumeItemListStart
+    \resumeItem{Built real-time AI chat streaming using LangChain's LangGraph
+      ReAct agent pattern with event-driven architecture (streamEvents v2), improving response experience and reducing perceived latency.}
+
+    \resumeItem{Designed a message branching system -- similar to ChatGPT/Claude -- storing
+      parent-child message relationships, enabling users to navigate conversation branches and
+      regenerate alternative AI responses from any point; reduced user-reported friction by
+      \textasciitilde30\%.}
+
+    \resumeItem{Co-architected a comprehensive open-source project management platform connecting
+      open-source architects with project sponsors.}
+
+    \resumeItem{Engineered secure user authentication and role-based access control (RBAC) system
+      using Supabase, managing permissions across 5+ resource types with zero reported auth
+      vulnerabilities.}
+
+    \resumeItem{Designed and implemented RESTful APIs for project and proposal management.}
+
+    \resumeItem{Built a scalable PostgreSQL schema and a reusable UI component library with
+      Storybook, speeding up feature development.}
+
+    \resumeItem{Developed fully responsive and accessible interfaces using Tailwind CSS.}
+  \resumeItemListEnd
+
+  \textit{\small\textbf{Stack:} Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL,
+    LangChain, LangGraph, Jest, Git, GitHub}
+
+  %% ── Imito AG ───────────────────────────────────────────────────────────────
+  \resumeSubheading
+    {Front-End Developer}{February 2022 -- May 2023}
+    {\href{https://imito.io}{Imito AG}}{Z\"{u}rich, Switzerland (Remote)}
+
+  \resumeItemListStart
+    \resumeItem{Customized the payment checkout flow to securely pass user data, enabling the team
+      to migrate away from a third-party provider and saving an estimated \$12K/year in
+      licensing fees while improving backend event tracking reliability from \textasciitilde78\%
+      to 99\%.}
+
+    \resumeItem{Re-engineered PDF generation by migrating from Mustache to Puppeteer/Chromium,
+      reducing document generation time and enabling consistent multi-page layouts for medical professionals.}
+
+    \resumeItem{Modernized the code base by migrating class components to functional components with
+      React Hooks and integrating TypeScript throughout, improving long-term
+      maintainability and developer happiness.}
+
+    \resumeItem{Designed and documented an enterprise-wide reusable component library using
+      Storybook, establishing consistent UX patterns across 10+ product views.}
+  \resumeItemListEnd
+
+  \textit{\small\textbf{Stack:} TypeScript, JavaScript, React, Material UI, CSS, Jest, React
+    Testing Library, Puppeteer, Chromium, Storybook, Jira, Bitbucket, Confluence, Git}
+
+  %% ── Fidel Labs ─────────────────────────────────────────────────────────────
+  \resumeSubheading
+    {Software Developer (Two Concurrent Engagements)}{February 2021 -- April 2022}
+    {Fidel Labs}{Addis Ababa, Ethiopia}
+
+  \resumeSubRole
+    {Lead Front-End Developer -- MedhanET (In-house E-Prescription Platform)}
+    {Feb 2021 -- Apr 2022}
+
+  \resumeItemListStart
+    \resumeItem{Led a small frontend team in redesigning and rebuilding the MedhanET e-prescription platform.}
+
+    \resumeItem{Helped introduce Next.js SSR and SSG patterns to improve application performance and page load times, increasing Lighthouse performance scores from 62 to 91.}
+
+    \resumeItem{Established a comprehensive testing strategy with Jest and Cypress, achieving
+      90\% coverage across critical prescription-handling workflows.}
+
+    \resumeItem{Implemented an automated CI/CD pipeline with GitHub Actions, reducing production incidents.}
+
+    \resumeItem{Built and documented a component library with Storybook, accelerating onboarding
+      time for new developers.}
+  \resumeItemListEnd
+
+  \resumeSubRole
+    {Full Stack Developer -- Aspire Ability (Outsourced Project, Washington, US)}
+    {Aug 2021 -- Jan 2022}
+
+  \resumeItemListStart
+    \resumeItem{Developed and launched a full-stack talent development platform from the ground up
+      for Arizona State University, serving hundreds of students and staff.}
+
+    \resumeItem{Built reusable React components, state management, and data layer; contributed to
+      RESTful API development using Node.js and Express; established comprehensive test coverage
+      with Jest and React Testing Library.}
+
+    \resumeItem{Containerized the application using Docker and provisioned infrastructure on AWS
+      with Terraform, enabling reproducible deployments across staging and production
+      environments.}
+  \resumeItemListEnd
+
+  \textit{\small\textbf{Stack:} JavaScript, TypeScript, React, Next.js, Material UI, Ant Design,
+    Jest, Cypress, React Testing Library, Storybook, Node.js, Express, PostgreSQL, TypeORM,
+    Docker, Terraform, GitHub Actions, Git}
+
+  %% ── Virtual Psychiatrist ───────────────────────────────────────────────────
+  \resumeSubheading
+    {Full Stack Developer}{February 2019 -- January 2021}
+    {Virtual Psychiatrist}{Addis Ababa, Ethiopia}
+
+  \resumeItemListStart
+    \resumeItem{Implemented a lightweight peer-to-peer video calling feature using
+      WebRTC (PeerJS), React, Node.js, and Socket.IO, enabling real-time consultations for
+       patient--psychiatrist pairs.}
+
+    \resumeItem{Designed and developed RESTful APIs with Node.js/Express and a MongoDB data
+      layer, supporting core platform features.}
+
+    \resumeItem{Built a reusable React component library and managed global state, maintaining
+      consistent UX across web and mobile-responsive views.}
+  \resumeItemListEnd
+
+  \textit{\small\textbf{Stack:} JavaScript, React, Ant Design, PeerJS, Socket.IO, Node.js,
+    Express, MongoDB, GitHub Actions, Git}
+
+\resumeSubHeadingListEnd
+
+% ── SKILLS ────────────────────────────────────────────────────────────────────
+\section{Skills}
+
+\begin{itemize}[leftmargin=0pt,label={},itemsep=5pt]
+  \small
+
+  \item \textbf{Languages:}
+    JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL
+
+  \item \textbf{Front-End:}
+    React.js, Next.js, Tailwind CSS, Material UI, Ant Design, Storybook
+
+  \item \textbf{AI \& LLM:}
+    LangChain, LangGraph (ReAct agents, event streaming), ONNX Runtime, OpenCV.js
+
+  \item \textbf{Back-End \& APIs:}
+    Node.js, Express, RESTful API design, WebSockets (Socket.IO), WebRTC (PeerJS), better-auth
+
+  \item \textbf{Testing:}
+    Jest, Cypress, React Testing Library, TDD
+
+  \item \textbf{Cloud \& DevOps:}
+    AWS, Docker, Terraform, GitHub Actions, Vercel, Cloudflare R2, Nginx, Heroku, CI/CD pipelines
+
+  \item \textbf{Databases:}
+    PostgreSQL, MongoDB, Supabase, Drizzle ORM, TypeORM
+
+  \item \textbf{Methodology \& Tools:}
+    Agile/Scrum, Kanban, Git, GitHub, Jira, Bitbucket, Confluence
+\end{itemize}
+
+% ── PROJECTS ──────────────────────────────────────────────────────────────────
+\section{Personal Projects}
+
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {Galatea -- \href{https://galatea-tfxh.vercel.app/}{galatea-tfxh.vercel.app}}{2026}
+
+  \resumeItemListStart
+    \resumeItem{Built and deployed a web app that turns chess books into interactive study material:
+      readers upload a PDF, click any printed diagram, and the position is recognized and opened
+      on an embedded Lichess analysis board.}
+
+    \resumeItem{Moved board recognition from a separate Python/PyTorch service into the Next.js
+      server by converting the vision model to ONNX and porting the image pipeline to TypeScript
+      (OpenCV.js + ONNX Runtime); inference dropped from 768 ms to 186 ms per board and the
+      separate ML service was removed from deployment.}
+
+    \resumeItem{Designed direct-to-storage uploads to Cloudflare R2 via presigned URLs with SHA-256
+      deduplication, range-request streaming that opens a 42 MB book after downloading
+      \textasciitilde1 MB, Google sign-in with better-auth, and PostgreSQL with Drizzle migrations.}
+  \resumeItemListEnd
+
+  \textit{\small\textbf{Stack:} Next.js, React, TypeScript, Tailwind CSS, PostgreSQL, Drizzle ORM,
+    better-auth, Cloudflare R2, ONNX Runtime, OpenCV.js, pdf.js, Vercel}
+
+\resumeSubHeadingListEnd
+
+% ── EDUCATION ─────────────────────────────────────────────────────────────────
+\section{Education}
+
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Bachelor of Science in Software Engineering}{January 2021}
+    {Addis Ababa Science and Technology University}{Addis Ababa, Ethiopia}
+
+\resumeSubHeadingListEnd
+
+\end{document}
